@@ -1,0 +1,19 @@
+{
+  "name": "insta_clone_js",
+  "version": "1.0.0",
+  "description": "Instagram clone coding with Express, Prisma, GraphQL and React!",
+  "main": "index.js",
+  "repository": "https://github.com/dowookims/insta_clone_js.git",
+  "author": "dowookims <kaei2574@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.17.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "nodemon": "^1.18.11"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  }
+}
