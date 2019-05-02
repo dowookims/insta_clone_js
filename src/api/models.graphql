@@ -30,8 +30,8 @@ type Like {
 type Comment {
   id: ID!
   text: String!
-  user: User!
   post: Post!
+  user: User!
 }
 
 type File {

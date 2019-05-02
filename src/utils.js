@@ -2,6 +2,7 @@ require('dotenv').config();
 import { adjectives, nouns } from "./words";
 import nodemailer from "nodemailer";
 import sgTransport from "nodemailer-sendgrid-transport";
+import jwt from "jsonwebtoken";
 
 
 const sendMail = email => { 
@@ -26,7 +27,9 @@ export const sendSecretMail = (address, secret) => {
     from: "dou@prismagram.com",
     to: address,
     subject: "🔒Login for Insta_cloning apps🔒",
-    html: `Hello! Your login secret is ${secret}.<br/> Copy paste on the app/web to login`
+    html: `Hello! Your login secret is <strong>${secret}</strong>.<br/> Copy paste on the app/web to login`
   };
   return sendMail(email);
-}
+};
+
+export const generateToken = (id) => jwt.sign({ id}, process.env.JWT_TOKEN);
