@@ -3,7 +3,9 @@ Instagram clone coding with Express, Prisma, GraphQL and React!
 
 ## User Stories
 
-- [ ] Login
+- [√] Create Account
+- [ ] Request Secret
+- [ ] Confirm Secret (Login)
 - [ ] Like / Unlike a photo
 - [ ] Comment on a photo
 - [ ] Search by user
@@ -12,7 +14,6 @@ Instagram clone coding with Express, Prisma, GraphQL and React!
 - [ ] Follow / Unfollow User
 - [ ] See the full photo
 - [ ] Edit profile
-- [ ] Create Account
 - [ ] Upload a photo
 - [ ] Edit the photo
 - [ ] See the feed

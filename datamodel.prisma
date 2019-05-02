@@ -9,6 +9,7 @@ type User {
   comments: [Comment!]!
   followers: [User!]! @relation(name: "FollowRelation")
   following: [User!]! @relation(name: "FollowRelation")
+  loginSecret: String
 }
 
 type Post {
