@@ -2,7 +2,6 @@ import passport from 'passport';
 import {Strategy, ExtractJwt} from 'passport-jwt';
 import { prisma } from '../generated/prisma-client';
 
-
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
   secretOrKey: process.env.JWT_TOKEN
@@ -10,10 +9,12 @@ const jwtOptions = {
 
 const verifyUser = async (payload, done) => {
   try {
-    const user = await prisma.user({ id: payload.id})
+    const user = await prisma.user({ id: payload.id })
     if (user !== null){
+      console.log('yes user')
       return done(null, user);
     } else {
+      console.log('no user')
       return done(null, false);
     }
   } catch (err) {
@@ -21,10 +22,11 @@ const verifyUser = async (payload, done) => {
   }
 };
 
-export const authenticateJwt = (req, res, next) => passport.authenticate("jwt", { sessions: false }, (err, user) => {
-  if (user){
-    req.user = user;
-  }
+export const authenticateJwt = (req, res, next) => 
+  passport.authenticate("jwt", { sessions: false }, (error, user) => {
+    if (user){
+      req.user = user;
+    }
   next();
 })(req, res, next); // return 된 함수를 이 3인자로 실행해줘야 한다.
 
