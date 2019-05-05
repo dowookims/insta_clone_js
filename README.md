@@ -11,9 +11,13 @@ Instagram clone coding with Express, Prisma, GraphQL and React!
 - [√] Search by user
 - [√] Search by location
 - [√] Follow / Unfollow User
-- [ ] Edit profile
-- [ ] See user profile
+- [√] Edit profile
+- [√] See user profile
+- [ ] See My profile
 - [ ] See the full photo
 - [ ] Upload a photo
 - [ ] Edit the photo
 - [ ] See the feed
+
+## Todo
+- [√] Edit Username (check unique)
