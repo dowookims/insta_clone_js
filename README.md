@@ -10,10 +10,10 @@ Instagram clone coding with Express, Prisma, GraphQL and React!
 - [√] Comment on a photo
 - [√] Search by user
 - [√] Search by location
-- [ ] See user profile
-- [ ] Follow / Unfollow User
-- [ ] See the full photo
+- [√] Follow / Unfollow User
 - [ ] Edit profile
+- [ ] See user profile
+- [ ] See the full photo
 - [ ] Upload a photo
 - [ ] Edit the photo
 - [ ] See the feed
