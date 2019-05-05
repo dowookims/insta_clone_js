@@ -8,8 +8,8 @@ Instagram clone coding with Express, Prisma, GraphQL and React!
 - [√] Confirm Secret (Login)
 - [√] Like / Unlike a photo
 - [√] Comment on a photo
-- [ ] Search by user
-- [ ] Search by location
+- [√] Search by user
+- [√] Search by location
 - [ ] See user profile
 - [ ] Follow / Unfollow User
 - [ ] See the full photo
