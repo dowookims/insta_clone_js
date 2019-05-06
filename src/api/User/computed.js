@@ -6,24 +6,53 @@ export default {
   // @param 1 is a parent(root) resolver that above the query. if i called fullName, parent will be user
   
     fullName: parent => {
-    return `${parent.firstName} ${parent.lastName}`
+      return `${parent.firstName} ${parent.lastName}`
     },
-    amIFollowing: async (parent, _, { request }) => {
+    isFollowing: async (parent, _, { request }) => {
       const { user } = request;
       const { id:parentId } = parent;
       try {
-        const exists = await prisma.$exists.user({AND: [{id:parentId}, {followers_some: [user.id]}]
+        return await prisma.$exists.user({
+          AND: [
+            { 
+              id: user.id 
+            }, 
+            {
+              following_some: 
+                {
+                  id: parentId
+                }  
+            }
+          ]
         });
-        if (exists) return true;
-        else return false;
       } catch (err){
         console.log(err)
       }
     },
-    itsMe: ( parent, _, { request }) => {
+    isSelf: ( parent, _, { request }) => {
       const { user } = request;
       const { id: parentId } = parent;
       return user.id === parentId;
+    }
+  },
+  Post: {
+    isLiked: (parent, _, { request }) => {
+      const { user } = request;
+      const { id } = parent;
+      return prisma.$exists.like({ 
+        AND : [
+          {
+            user: {
+              id: user.id
+            }
+          },
+          {
+            post: {
+              id
+            }
+          }
+        ]
+      });
     }
   }
 }
