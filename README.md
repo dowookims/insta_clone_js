@@ -14,9 +14,9 @@ Instagram clone coding with Express, Prisma, GraphQL and React!
 - [√] Edit profile
 - [√] See user profile
 - [√] See My profile
-- [ ] See the full photo
-- [ ] Upload a photo
-- [ ] Edit the photo
+- [√] See the full post
+- [√] Upload a post
+- [√] Edit the post
 - [ ] See the feed
 - [ ] See rooms
 - [ ] See room
