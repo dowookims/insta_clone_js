@@ -21,6 +21,8 @@ type Post {
   caption: String!
   likes: [Like!]! @relation(name: "LikesOfPost" onDelete: CASCADE)
   comments: [Comment!]! @relation(name: "CommentsOfPost" onDelete: CASCADE)
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
 }
 
 type Like {
