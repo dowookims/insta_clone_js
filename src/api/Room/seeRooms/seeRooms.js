@@ -1,3 +1,6 @@
+import { ROOM_FRAGMENT } from "../../../fragment";
+import { prisma } from "../../../../generated/prisma-client";
+
 export default {
   Query: {
     seeRooms: (_, __, { request, isAuthenticated }) => {
@@ -8,7 +11,7 @@ export default {
           id: user.id
         }
       }
-    })
+    }).$fragment(ROOM_FRAGMENT);
     }
   }
 }

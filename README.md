@@ -18,9 +18,9 @@ Instagram clone coding with Express, Prisma, GraphQL and React!
 - [√] Upload a post
 - [√] Edit the post
 - [√] See the feed
-- [√] See rooms
+- [c] See rooms
+- [v] Send Private DM
 - [ ] See room
-- [ ] Send Private DM
 - [ ] Receive DM(Real Time)
 
 ## Todo
