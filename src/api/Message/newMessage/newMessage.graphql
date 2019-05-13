@@ -1,0 +1,29 @@
+type Subscription {
+  newMessage(roomId: String!): Message
+}
+
+# subscription {
+#   message(
+#     where: {
+#       AND: [
+#         { mutation_in: CREATED }
+#         {
+#           node: {
+#             AND: [
+#               {room: { id: "~~~~"}}
+#               {to: { id: "~~~~~~"}}
+#             ]
+#           }
+#         }
+#       ]
+#     }
+#   ) {
+#     node {
+#       id
+#       text
+#       room {
+#         id
+#       }
+#     }
+#   }
+# }
