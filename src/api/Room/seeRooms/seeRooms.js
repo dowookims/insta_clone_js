@@ -11,7 +11,7 @@ export default {
           id: user.id
         }
       }
-    }).$fragment(ROOM_FRAGMENT);
+    })
     }
   }
 }

@@ -14,10 +14,10 @@ export default {
             participants: {
               connect: [ { id: toId}, { id: user.id }]
             },
-          }).$fragment(ROOM_FRAGMENT);
+          })
         }
       } else {
-        room = await prisma.room({id: roomId }).$fragment(ROOM_FRAGMENT);
+        room = await prisma.room({id: roomId })
       }
       if (!room){
         throw Error("Room Not Found")
